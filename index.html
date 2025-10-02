@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/d9cd669bbb.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      <nav class="navbar bg-danger d-flex justify-content-between">
+      <nav class="navbar bg-secondary d-flex justify-content-between">
         <span>
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -23,7 +23,7 @@
           </div>
         </span>
         <span class="d-flex">
-          <div>
+          <div class="me-3">
             <!-- Button trigger modal -->
             <button
               type="button"
@@ -31,7 +31,7 @@
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop"
             >
-              Launch static backdrop modal
+              Creat a new post
             </button>
 
             <!-- Modal -->
@@ -48,7 +48,7 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                      Modal title
+                      Create a new post
                     </h1>
                     <button
                       type="button"
@@ -57,7 +57,14 @@
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div class="modal-body">...</div>
+                  <div class="mb-3 ms-3">
+                    <label for="message-text" class="col-form-label">Caption: </label>
+                    <textarea class="form-control text-secondary" id="message-text">Add the caption of ur post here</textarea>
+                  </div>
+                  <div class="icons2 d-flex justify-content-start mx-3">
+                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-location-dot"></i>                  
+                  </div>
                   <div class="modal-footer">
                     <button
                       type="button"
@@ -67,7 +74,7 @@
                       Close
                     </button>
                     <button type="button" class="btn btn-primary">
-                      Understood
+                      Publish
                     </button>
                   </div>
                 </div>
@@ -76,7 +83,7 @@
           </div>
           <!--Dropdown-->
           <div>
-            <div class="btn-group">
+            <div class="btn-group me-3">
               <button
                 type="button"
                 class="btn btn-secondary dropdown-toggle"
@@ -86,14 +93,137 @@
                 <i class="fa-solid fa-gear"></i>              
               </button>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                <li><a class="dropdown-item" href="#">Menu item</a></li>
-                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                <hr>
+                <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                
               </ul>
             </div>
           </div>
         </span>
       </nav>
+      <!--Posts-->
+      <div class="container d-flex flex-column">
+        <div class="nav nav-tabs  justify-content-center" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa-solid fa-expand"></i></button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </div>
+        <!--Galería-->
+        <div class="tab-content  justify-content-center" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+            <div class="container ">
+              <div class="row">
+                <div class="col-4 mt-5 mb-5">
+                  <img src="./img/image1.png" alt="primera" width="350px" height="250px">
+                </div>
+                <div class="col-4 mt-5 mb-5">
+                  <img src="./img/image2.png" alt="primera" width="350px" height="250px">
+                </div>
+                <div class="col-4 mt-5 mb-5">
+                  <img src="./img/image3.png" alt="primera" width="350px" height="250px">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <img src="./img/image4.png" alt="primera" width="350px" height="250px">
+                </div>
+                <div class="col-4">
+                  <img src="./img/image5.png" alt="primera" width="350px" height="250px">
+                </div>
+                <div class="col-4">
+                  <img src="./img/image6.png" alt="primera" width="350px" height="250px">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Columna-->
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="container d-flex flex-column">
+              <div class="d-flex justify-content-center">
+                <div class="card mt-5" style="width: 25rem;">
+                <div class="d-flex justify-content-between">
+                  <h5>This is my first post</h5>
+                  <p>01/06</p>
+                </div>
+                <img src="./img/image1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <strong>1000 Likes</strong>
+                  <p class="card-text">Este es el texto para la primera foto</p>
+                </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="card mt-5" style="width: 25rem;">
+                <div class="d-flex justify-content-between">
+                  <h5>This is my second post</h5>
+                  <p>02/06</p>
+                </div>
+                <img src="./img/image2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <strong>2000 Likes</strong>
+                  <p class="card-text">Este es el texto para la segunda foto</p>
+                </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="card mt-5" style="width: 25rem;">
+                <div class="d-flex justify-content-between">
+                  <h5>This is my third post</h5>
+                  <p>03/06</p>
+                </div>
+                <img src="./img/image3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <strong>3000 Likes</strong>
+                  <p class="card-text">Este es el texto para la tercera foto</p>
+                </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="card mt-5" style="width: 25rem;">
+                <div class="d-flex justify-content-between">
+                  <h5>This is my fourth post</h5>
+                  <p>04/06</p>
+                </div>
+                <img src="./img/image4.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <strong>4000 Likes</strong>
+                  <p class="card-text">Este es el texto para la cuarta foto</p>
+                </div>
+                </div>
+              </div><div class="d-flex justify-content-center">
+                <div class="card mt-5" style="width: 25rem;">
+                <div class="d-flex justify-content-between">
+                  <h5>This is my fifth post</h5>
+                  <p>05/06</p>
+                </div>
+                <img src="./img/image5.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <strong>5000 Likes</strong>
+                  <p class="card-text">Este es el texto para la quinta foto</p>
+                </div>
+                </div>
+              </div><div class="d-flex justify-content-center">
+                <div class="card mt-5" style="width: 25rem;">
+                <div class="d-flex justify-content-between">
+                  <h5>This is my sixth post</h5>
+                  <p>06/06</p>
+                </div>
+                <img src="./img/image6.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <strong>6000 Likes</strong>
+                  <p class="card-text">Este es el texto para la sexta foto</p>
+                </div>
+                </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
     </body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
